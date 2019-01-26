@@ -10,6 +10,9 @@ public class MainController {
 
     @GetMapping("/")
     public String Index(@AuthenticationPrincipal User user) {
+        if (user != null) {
+            return "redirect:/target/all";
+        }
         return "index";
     }
 

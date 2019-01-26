@@ -15,6 +15,19 @@ create table usr (
     primary key (id)
 );
 
+create table target (
+    id int8 not null,
+    userid int8 not null,
+    transactionid int8 not null,
+    name varchar(255) not null,
+    description varchar(255),
+    cost int8 not null,
+    createDate date not null,
+    expireDate date not null,
+    state varchar(17),
+    primary key (id)
+);
+
 alter table if exists user_role
     add constraint user_role_fk
     foreign key (user_id) references usr;
