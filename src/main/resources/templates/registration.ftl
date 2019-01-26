@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
 </head>
 <body>
-    This is login page!!!
+    Add user
 
-    <form action="/login" method="post">
+    <form action="/registration" method="post">
         <div class="form-group">
             <label for="inputEmail1">Логин</label>
             <input name="login" type="text" class="form-control" id="inputEmail1" placeholder="Логин">
@@ -21,7 +21,10 @@
             <label for="inputPassword1">Пароль</label>
             <input name="password" type="password" class="form-control" id="inputPassword1" placeholder="Пароль">
         </div>
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
+        <div class="form-group">
+            <label for="inputPassword2">Пароль</label>
+            <input name="password" type="password" class="form-control" id="inputPassword2" placeholder="Повторите пароль">
+        </div>
         <button type="submit" class="btn btn-primary">Войти</button>
     </form>
 
