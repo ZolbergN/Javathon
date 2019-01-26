@@ -12,19 +12,20 @@
 <body>
     Add user
 
-    <form action="/registration" method="post">
+    <form action="/register" method="post">
         <div class="form-group">
             <label for="inputEmail1">Логин</label>
-            <input name="login" type="text" class="form-control" id="inputEmail1" placeholder="Логин">
+            <input name="username" type="text" class="form-control" id="inputEmail1" placeholder="Логин">
         </div>
         <div class="form-group">
             <label for="inputPassword1">Пароль</label>
             <input name="password" type="password" class="form-control" id="inputPassword1" placeholder="Пароль">
         </div>
-        <div class="form-group">
-            <label for="inputPassword2">Пароль</label>
-            <input name="password" type="password" class="form-control" id="inputPassword2" placeholder="Повторите пароль">
-        </div>
+        <#--<div class="form-group">-->
+            <#--<label for="inputPassword2">Пароль</label>-->
+            <#--<input name="password" type="password" class="form-control" id="inputPassword2" placeholder="Повторите пароль">-->
+        <#--</div>-->
+        <input type="hidden" name="_csrf" value="${_csrf.token}">
         <button type="submit" class="btn btn-primary">Войти</button>
     </form>
 

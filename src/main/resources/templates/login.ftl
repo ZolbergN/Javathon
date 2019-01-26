@@ -15,7 +15,7 @@
     <form action="/login" method="post">
         <div class="form-group">
             <label for="inputEmail1">Логин</label>
-            <input name="login" type="text" class="form-control" id="inputEmail1" placeholder="Логин">
+            <input name="username" type="text" class="form-control" id="inputEmail1" placeholder="Логин">
         </div>
         <div class="form-group">
             <label for="inputPassword1">Пароль</label>
