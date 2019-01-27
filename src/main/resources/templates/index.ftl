@@ -1,19 +1,30 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<#import "parts/page.ftl" as p>
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
-</head>
-<body>
-    Hello!!!
+<@p.page>
+    <div class="cover-container d-flex col-md-12  h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">Donation Motivation</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="/register">Регистация</a>
+                <a class="nav-link" href="/login">Войти</a>
+            </nav>
+        </div>
+    </header>
 
-    <script src="js/jquery.js" crossorigin="anonymous"></script>
-    <script src="js/popper.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
-</body>
-</html>
+    <div class="container">
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Donation Motivation</h1>
+            <p class="lead">Зарегистрируйтесь прямо сейчас и начните развиваться, помогая другим!</p>
+            <p class="lead">
+                <a href="/register" class="btn btn-lg btn-secondary">Зарегистрироваться сейчас!</a>
+            </p>
+        </main>
+    </div>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Все права защищены &copy;</p>
+        </div>
+    </footer>
+</@p.page>
