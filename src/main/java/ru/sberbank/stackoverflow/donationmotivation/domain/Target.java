@@ -13,9 +13,7 @@ public class Target {
     private long transactionid;
     private String name;
     private String description;
-
     private Long cost;
-
     @Enumerated(EnumType.STRING)
     @Column(length = 17)
     private TargetState state;

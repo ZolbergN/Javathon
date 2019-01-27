@@ -28,10 +28,20 @@ create table target (
     primary key (id)
 );
 
-create table transatctions (
+create table transactions (
     id int8 not null,
     targetid int8 not null,
-    cost int8 not null
+    orgid int8 not null,
+    cost int8 not null,
+    primary key (id)
+);
+
+create table organisation (
+    id int8 not null,
+    name varchar(255) not null,
+    url varchar(255),
+    description varchar(255) not null,
+    primary key (id)
 );
 
 alter table if exists user_role
