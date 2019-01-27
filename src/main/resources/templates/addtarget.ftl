@@ -15,14 +15,29 @@
                     <textarea name="description" class="form-control" id="targetDescription" placeholder="Описание"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="targetCost"></label>
-                    <input name="cost" type="text" class="form-control" id="targetCost" placeholder="Стоимость цели">
+                    <label>Дата завершения</label>
+                    <input name="endDate" type="text"
+                           id="datepicker"
+                           data-multiple-dates="3"
+                           data-multiple-dates-separator="-"
+                           data-position='right top'/>
+                </div>
+                <div class="form-group">
+                    <label for="targetCost">Выберите организацию</label>
+                    <#list org as o>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="orgId" value="${o.id}">
+                        <label class="form-check-label">
+                            ${o.name}
+                        </label>
+                    </div>
+                    </#list>
+                </div>
+                <div class="form-group">
+                    <label for="targetCost">Сумма</label>
+                    <input name="cost" type="text" class="form-control" id="targetCost" placeholder="Сумма">
                 </div>
                 <input type="hidden" name="_csrf" value="${_csrf.token}">
-                <button type="submit" class="btn btn-primary">Создать</button>
-
-                <h4 class="mb-3">Взнос</h4>
-
 
                 <div class="row">
 
@@ -33,16 +48,9 @@
                             <div class="input-group-prepend">
 
                             </div>
-                            <input type="text" class="form-control" id="cc-number" placeholder="XXXX-XXXX-XXXX-XXXX" required="">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Your card is required.
-                            </div>
+                            <input name="cardnumber" type="text" class="form-control" id="cc-number" placeholder="XXXX-XXXX-XXXX-XXXX" required="">
                         </div>
 
-
-                        <div class="invalid-feedback">
-                            Credit card number is required
-                        </div>
                     </div>
                 </div>
 
@@ -53,84 +61,54 @@
 
                         <div class="input-group">
                             <div class="input-group-prepend">
-
                             </div>
-                            <input type="text" class="form-control" id="cc-number" placeholder="Фамилия и имя" required="">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Your card is required.
-                            </div>
-                        </div>
-
-
-                        <div class="invalid-feedback">
-                            Credit card number is required
+                            <input name="cardname" type="text" class="form-control" id="cc-number" placeholder="Фамилия и имя" required="">
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-2 mb-3">
                         <label for="cc-expiration"></label>
 
                         <div class="input-group">
                             <div class="input-group-prepend">
-
                             </div>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="Месяц" required="">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Your card is required.
-                            </div>
-                        </div>
-
-
-                        <div class="invalid-feedback">
-                            Expiration date required
+                            <input name="mount" type="text" class="form-control" id="cc-expiration" placeholder="Месяц" required="">
                         </div>
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-2 mb-3">
                         <label for="cc-cvv"></label>
-
                         <div class="input-group">
                             <div class="input-group-prepend">
-
                             </div>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="Год" required="">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Your card is required.
-                            </div>
-                        </div>
-
-                        <div class="invalid-feedback">
-                            Security code required
+                            <input name="year" type="text" class="form-control" id="cc-cvv" placeholder="Год" required="">
                         </div>
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-2 mb-3">
                         <label for="cc-years"></label>
-
                         <div class="input-group">
                             <div class="input-group-prepend">
-
                             </div>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="CVV" required="">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Your card is required.
-                            </div>
-                        </div>
-
-
-                        <div class="invalid-feedback">
-                            Expiration date required
+                            <input name="cvv" type="text" class="form-control" id="cc-expiration" placeholder="CVV" required="">
                         </div>
                     </div>
                 </div>
 
-
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Оплатить</button>
 
             </form>
         </div>
     </div>
 </div>
+
+<link href="/css/datepicker.min.css" rel="stylesheet" type="text/css">
+<script src="/js/datepicker.min.js"></script>
+
+<script type="text/javascript">
+    $('#datepicker').datepicker({
+        minDate: new Date()
+    })
+</script>
 
 </@p.pagemain>

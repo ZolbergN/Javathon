@@ -6,7 +6,7 @@
         <div class="inner">
             <h3 class="masthead-brand">Donation Motivation</h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link" href="/register">Регистация</a>
+                <a class="nav-link" href="/register">Регистрация</a>
                 <a class="nav-link" href="/login">Войти</a>
             </nav>
         </div>

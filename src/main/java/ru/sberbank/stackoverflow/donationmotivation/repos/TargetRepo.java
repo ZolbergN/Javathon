@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface TargetRepo extends JpaRepository<Target, Long> {
     List<Target> findByUserid(Long userId);
+    Target findFirstById(Long targetId);
 }

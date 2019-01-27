@@ -8,19 +8,17 @@
 
     <title>Добро пожаловать на Donation Motivation</title>
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </head>
 
 <body class="text-center">
     <#nested >
 </div>
-
-
-<script src="/js/jquery.js" crossorigin="anonymous"></script>
-<script src="/js/popper.js" crossorigin="anonymous"></script>
-<script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
 
 <div id="sad654sd7ef12eafw8e97fwe123fweq67fwe31as"></div></body></html>
 
@@ -34,6 +32,10 @@
 
         <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/mainstyles.css" crossorigin="anonymous">
+
+        <script src="/js/jquery.js" crossorigin="anonymous"></script>
+        <script src="/js/popper.js" crossorigin="anonymous"></script>
+        <script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="d-flex flex-column h-100">
     <header>
@@ -70,10 +72,6 @@
             <span class="text-muted">Все права защищены.</span>
         </div>
     </footer>
-
-    <script src="/js/jquery.js" crossorigin="anonymous"></script>
-    <script src="/js/popper.js" crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
     <div id="sad654sd7ef12eafw8e97fwe123fweq67fwe31as"></div></body></html>
 </#macro>
