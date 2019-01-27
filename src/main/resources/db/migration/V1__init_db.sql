@@ -22,10 +22,16 @@ create table target (
     name varchar(255) not null,
     description varchar(255),
     cost int8 not null,
-    createDate date not null,
-    expireDate date not null,
+    createDate timestamp not null,
+    expireDate timestamp not null,
     state varchar(17),
     primary key (id)
+);
+
+create table transatctions (
+    id int8 not null,
+    targetid int8 not null,
+    cost int8 not null
 );
 
 alter table if exists user_role
