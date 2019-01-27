@@ -22,9 +22,25 @@ create table target (
     name varchar(255) not null,
     description varchar(255),
     cost int8 not null,
-    createDate date not null,
-    expireDate date not null,
+    createDate timestamp not null,
+    expireDate timestamp not null,
     state varchar(17),
+    primary key (id)
+);
+
+create table transactions (
+    id int8 not null,
+    targetid int8 not null,
+    orgid int8 not null,
+    cost int8 not null,
+    primary key (id)
+);
+
+create table organisation (
+    id int8 not null,
+    name varchar(255) not null,
+    url varchar(255),
+    description varchar(255) not null,
     primary key (id)
 );
 

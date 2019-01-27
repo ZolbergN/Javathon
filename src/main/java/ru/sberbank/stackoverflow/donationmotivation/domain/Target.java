@@ -2,7 +2,6 @@ package ru.sberbank.stackoverflow.donationmotivation.domain;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Set;
 
 @Entity
 @Table(name = "target")
@@ -14,13 +13,12 @@ public class Target {
     private long transactionid;
     private String name;
     private String description;
-    private Integer cost;
-
+    private Long cost;
     @Enumerated(EnumType.STRING)
     @Column(length = 17)
     private TargetState state;
-    private Date createDate;
-    private Date expireDate;
+    private Date createdate;
+    private Date expiredate;
 
     public long getId() {
         return id;
@@ -70,19 +68,27 @@ public class Target {
         this.state = state;
     }
 
-    public Date getCreateDate() {
-        return createDate;
+    public Long getCost() {
+        return cost;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setCost(Long cost) {
+        this.cost = cost;
     }
 
-    public Date getExpireDate() {
-        return expireDate;
+    public Date getCreatedate() {
+        return createdate;
     }
 
-    public void setExpireDate(Date expireDate) {
-        this.expireDate = expireDate;
+    public void setCreatedate(Date createdate) {
+        this.createdate = createdate;
+    }
+
+    public Date getExpiredate() {
+        return expiredate;
+    }
+
+    public void setExpiredate(Date expiredate) {
+        this.expiredate = expiredate;
     }
 }
